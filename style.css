@@ -1,0 +1,152 @@
+/* ======== ESTILO GENERAL ======== */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: url('https://www.transparenttextures.com/patterns/cubes.png'),
+              linear-gradient(180deg, #fffdf5, #fff8e1);
+  background-size: 250px 250px, cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: #4e342e;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  max-width: 900px;
+  width: 95%;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  padding: 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* ======== ENCABEZADO ======== */
+h1 {
+  text-align: center;
+  font-size: 1.8em;
+  margin-bottom: 10px;
+}
+
+/* ======== VIDEO ======== */
+.torti-video {
+  width: 90%;
+  max-width: 600px;
+  border-radius: 50%;
+  box-shadow: 0 0 15px rgba(0,0,0,0.25);
+  object-fit: cover;
+  display: block;
+  margin: 0 auto 20px;
+}
+
+/* ======== LADO DERECHO (globo + chat + botón) ======== */
+.lado-derecho {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  width: 100%;
+}
+
+/* ======== GLOBO DE CONVERSACIÓN ======== */
+.globo {
+  background: #fff8e1;
+  padding: 18px 20px;
+  border-radius: 18px;
+  box-shadow: 2px 4px 12px rgba(0,0,0,0.2);
+  font-size: 1em;
+  line-height: 1.5em;
+  margin-bottom: 15px;
+  transition: opacity 0.4s ease;
+}
+
+.globo.oculto {
+  display: none;
+}
+
+/* ======== CHAT ======== */
+.chat-section {
+  display: none;
+}
+
+.chat-section.visible {
+  display: block;
+}
+
+/* ======== BOTÓN ======== */
+button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #ffb300;
+  color: #fff;
+  font-size: 1.1em;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+button:hover {
+  background-color: #ffa000;
+  transform: scale(1.05);
+}
+
+/* ======== ANIMACIÓN GLOBO ======== */
+@keyframes flotar {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+.globo {
+  animation: flotar 3s ease-in-out infinite;
+}
+
+/* ======== MOBILE ======== */
+@media (max-width: 900px) {
+  .desktop-flex {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .torti-video {
+    width: 95%;
+    max-width: 400px;
+    margin: 0 auto 20px;
+  }
+
+  .globo, .chat-section {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  iframe {
+    height: 400px;
+  }
+}
+    .flex-contenedor {
+      display: flex;
+      justify-content: center; /* Centra horizontalmente */
+      align-items: center;     /* Centra verticalmente */
+      height: 300px;           /* Ejemplo de altura para centrado vertical */
+    }
+
+/* ======== DESKTOP FLEX ======== */
+@media (min-width: 901px) {
+  .desktop-flex {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;   /* alinea video con globo/chat arriba */
+    gap: 20px;                 /* separación entre video y lado derecho */
+  }
+
+  .torti-video {
+    flex-shrink: 0;
+  }
+
+  .lado-derecho {
+    width: 100%;
+    max-width: 350px;
+  }
+}
