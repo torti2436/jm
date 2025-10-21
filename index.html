@@ -9,16 +9,23 @@
 <body>
   <div class="container">
     <div class="torti-section">
-    <div class="flex-contenedor">
-      <img id="stage-image" alt="Torti etapa" src="/ingredientes/torti.png" width="15%"/>
-      <h1> ¡Hola, soy Torti!</h1> <br><br> </div>
+      <div class="flex-contenedor">
+        <img id="stage-image" alt="Torti etapa" src="/ingredientes/assets/torti.png" width="15%"/>
+        <h1> ¡Hola, soy Torti!</h1>
+        <br><br>
+      </div>
 
       <div class="desktop-flex">
-        <!-- Video a la izquierda -->
-        <video class="torti-video" autoplay loop muted playsinline>
-          <source src="/ingredientes/01.mp4" type="video/mp4">
-          Tu navegador no soporta video HTML5.
-        </video>
+        <!-- 🚀 TORTI EVOLUTIVA reemplaza el video -->
+        <div class="torti-evolutiva">
+          <img id="torti-img" src="/ingredientes/assets/etapa1.png" alt="Torti creciendo" class="torti-evolutiva-img">
+          <p id="torti-texto" class="torti-texto">Todavía soy solo harina y agua... 🌾</p>
+          <div class="acciones">
+            <button id="alimentar">🥚 Alimentar</button>
+            <button id="cuidar">💧 Cuidar</button>
+            <button id="descansar">☀️ Descansar</button>
+          </div>
+        </div>
 
         <!-- Lado derecho: globo/chat/botón -->
         <div class="lado-derecho">
@@ -39,11 +46,10 @@
 
           <button id="abrirChat">Hablar con Torti</button>
         </div>
-      </div>
+      </div> <!-- 👈 cierra .desktop-flex -->
     </div>
   </div>
 
   <script src="script.js"></script>
 </body>
 </html>
-
