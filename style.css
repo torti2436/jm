@@ -129,7 +129,7 @@ button:hover {
       display: flex;
       justify-content: center; /* Centra horizontalmente */
       align-items: center;     /* Centra verticalmente */
-      height: 300px;           /* Ejemplo de altura para centrado vertical */
+      height: 100px;           /* Ejemplo de altura para centrado vertical */
     }
 
 /* ======== DESKTOP FLEX ======== */
@@ -149,6 +149,13 @@ button:hover {
     width: 100%;
     max-width: 350px;
   }
+
+      .flex-contenedor {
+      display: flex;
+      justify-content: center; /* Centra horizontalmente */
+      align-items: center;     /* Centra verticalmente */
+      height: 250px;           /* Ejemplo de altura para centrado vertical */
+    }
 }
 
 /* ==== TORTI EVOLUTIVA ==== */
@@ -180,6 +187,7 @@ button:hover {
   display: flex;
   gap: 10px;
   justify-content: center;
+  padding: 15px;
 }
 
 .acciones button {
