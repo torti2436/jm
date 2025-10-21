@@ -37,7 +37,7 @@ const frases = [
 
 // Cargar o iniciar etapa
 let etapa = parseInt(localStorage.getItem("tortiEtapa")) || 1;
-const maxEtapas = 13;
+const maxEtapas = 5;
 
 // Elementos del DOM
 const tortiImg = document.getElementById("torti-img");
@@ -46,7 +46,7 @@ const botones = document.querySelectorAll(".acciones button");
 
 // Actualiza la imagen y el texto
 function actualizarTorti() {
-  tortiImg.src = `/ingredientes/assets/etapa${etapa}.png`;
+  tortiImg.src = `assets/etapa${etapa}.gif`;
   tortiTexto.textContent = frases[etapa - 1];
   localStorage.setItem("tortiEtapa", etapa);
 
